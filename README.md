@@ -15,7 +15,7 @@ the converter also includes a lossy mode which can compress the bytebeat even mo
 
 # how to use my converter
 1. open a bytebeat composer ([dollchan bytebeat composer](https://dollchan.net/bytebeat/) preferred)
-2. paste the bytebeat from `bytebeat.js`.
+2. paste the bytebeat from `fbvlve-player.js`.
 3. keep that tab/window open for later.
 4. make sure you have the necessary python packages for `bytebeatconverter.py`.
 5. run that python script.
