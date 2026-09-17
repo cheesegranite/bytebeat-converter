@@ -8,6 +8,8 @@ def encode(data, error = 1):
     current = 0
     err0r = 0
     for i, sample in enumerate(data):
+        if i % 1000 == 0:
+            print(f"\rencoding... {i}/{len(data)}  {i/len(data):.1%} ", end="")
         print(f"\r{i}/{len(data)}  {i/len(data):.1%}", end="")
         err0r += abs(sample - current)
         if err0r > error:
@@ -16,7 +18,7 @@ def encode(data, error = 1):
             err0r = 0
         else:
             encoded.append(0)
-    print(f"\r{len(data)}/{len(data)} 100.0% ")
+    print(f"\rencoding... {len(data)}/{len(data)} 100.0% ")
 
     print("finalizing...")
     common = Counter(encoded).most_common()
